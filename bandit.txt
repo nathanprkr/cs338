@@ -2,7 +2,7 @@ bandit.txt - Nathan Parker - Created 9/17/24
 
 
 SSH:
-ssh -p 2220 bandit8@bandit.labs.overthewire.org
+ssh -p 2220 bandit11@bandit.labs.overthewire.org
 
 
 Level 0:
@@ -55,5 +55,22 @@ grep 'millionth' data.txt
 Either way the password is the same
 
 Level 9:
+sort data.txt | uniq -u
+Pass: 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+
+Level 10:
+strings data.txt | grep '==*'
+Pass: FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+
+Level 11:
+base64 -d data.txt
+Pass: dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
+
+Level 12:
+Had to google what to put as the operand in the tr function for ROT13
+cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+Pass: 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+
+
 
 
