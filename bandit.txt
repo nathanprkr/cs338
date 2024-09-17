@@ -8,27 +8,33 @@ ssh -p 2220 bandit11@bandit.labs.overthewire.org
 Level 0:
 ssh -p 2220 bandit0@bandit.labs.overthewire.org
 I logged in using the password bandit0
+Didn't really learn anything on this one, I already knew how to use ssh
 
 Level 1:
 Used ls and cat to get the password in the readme file: ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
+Again just used previous stuff I knew
 
 Level 2:
 Used cat ./- to get pass: 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
+Learned: that you can put ./ in front of a string to specify that it is a filename (doing cat - doesn't work)
 
 Level 3:
 cat spaces\ in\ this\ filename
 Pass:MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+Learned: I actually already knew about using \ in front of spaces because I have had issues with it in the past (because im bad at naming files)
 
 Level 4:
 Cd inhere
 Ls -a
 Cat ...Hiding-From-You
 Pass: 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
+Learned: already knew about ls -a to find hidden files, but was fun to use
 
 Level 5:
 I did this so inefficiently. I just did cat ./-file0[insert number] over and over again until this happened...
 cat ./-file07
 Pass: 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
+I think that I could've used the string function to find the only human-readable file and gone from there, but since I could scan each file very quickly manually (and there were only like 10 files), I did it the other way.
 
 Level 6:
 Cd inhere
@@ -37,12 +43,14 @@ Find . -size 1033c
 Cd maybehere07
 Cat ./.file2
 Pass: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+Learned: how to use the find command
 
 Level 7:
 $ find /  -user bandit7 -group bandit6 -size 33c
 Got a long list of files, and this one stood out: /var/lib/dpkg/info/bandit7.password
 Cat /var/lib/dpkg/info/bandit7.password
 Pass: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+Learned: some more operators that can be used with the find command
 
 Level 8:
 Probably not the way you are really supposed to do this but this is what I did
@@ -53,23 +61,28 @@ Password next to it was: dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
 Another way (and probably the "right" way) to do this would be to use this command:
 grep 'millionth' data.txt
 Either way the password is the same
+Learned: how to use grep in a very basic way, and that command+f still works in terminal
 
 Level 9:
 sort data.txt | uniq -u
 Pass: 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+Learned: what the uniq command does, and how to implement pipes to "stack" commands
 
 Level 10:
 strings data.txt | grep '==*'
 Pass: FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+Learned: how to use the strings function, and had to look up the '==*' part. That taught me how to search for an undefined (but multiple) number of a certain character
 
 Level 11:
 base64 -d data.txt
 Pass: dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
+Learned: what base64 is, and how to decode a file using it
 
 Level 12:
 Had to google what to put as the operand in the tr function for ROT13
 cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 Pass: 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+Learned: what ROT13 is, and how to decode a file using it. I also learned how to use the tr function/how to format its operators
 
 
 
