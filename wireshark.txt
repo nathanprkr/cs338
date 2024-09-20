@@ -1,0 +1,18 @@
+wireshark.txt - Nathan Parker
+
+=====daytime=====
+
+1:
+129.6.15.28  TCP 74 35094 → 13 [SYN]
+192.168.64.2  TCP 66 13 → 35094 [SYN, ACK]
+129.6.15.28 TCP 54 35094 - 13 [ACK]
+2:35094
+3:the client needs a port to receive the data packets that the server is going to send over
+4:192.168.64.2 DAYTIME 105
+5:synchronize (SYN) and acknowledge (ACK)
+6: the server initiated the close, because the [FIN, ACK] is sent from port 13 (the server port)
+
+=====HTTP======
+1:
+2:
+3:
