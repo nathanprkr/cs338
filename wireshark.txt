@@ -17,4 +17,9 @@ wireshark.txt - Nathan Parker
 2: 
 I think it happens on the line provided below, because it is the one that contains the html text
 172.233.221.124 192.168.64.2 HTTP 667 HTTP/1.1 200 OK (text/html)
-3: after looking through all the lines, honestly I cant. I dont see anything that has any indication of requesting/passing an image.
+3: After looking through all the lines, honestly I cant. I'm actually really frustrated by this. I really want to find it, but I dont see anything that has any indication of requesting/passing an image.
+
+=====Questions=====
+Why does my Wireshark output seem to change every time I retry the http part of this experiment? The results seem just random - I get different numbers and types of lines almost every time. Also, which line contains the images?
+
+
