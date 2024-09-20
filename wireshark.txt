@@ -13,6 +13,8 @@ wireshark.txt - Nathan Parker
 6: the server initiated the close, because the [FIN, ACK] is sent from port 13 (the server port)
 
 =====HTTP======
-1:
-2:
-3:
+1: Seems like two, because I see two sets of SYN/SYN ACK/ACK lines 
+2: 
+I think it happens on the line provided below, because it is the one that contains the html text
+172.233.221.124 192.168.64.2 HTTP 667 HTTP/1.1 200 OK (text/html)
+3: after looking through all the lines, honestly I cant. I dont see anything that has any indication of requesting/passing an image.
